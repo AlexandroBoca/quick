@@ -49,7 +49,7 @@ class PaddleLoader {
           if (typeof window !== 'undefined' && window.Paddle) {
             this.instance = window.Paddle;
             this.isLoading = false;
-            if (this.loadPromise) {
+            if (this.loadPromise && this.instance) {
               resolve(this.instance);
             }
           } else {
